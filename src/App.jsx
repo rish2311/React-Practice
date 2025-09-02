@@ -1,13 +1,18 @@
-import Description from './components/description'
-import Name from './components/name'
-import './App.css'
+import { useState } from "react"
 
 function App() {
+  const [fruit, setFruit] = useState('Apple');
+
+  const handleFruit = () => {
+    setFruit('Banana')
+  }
 
   return (
     <div>
-      <h1><Description /></h1>
-      <h2><Name /></h2>
+      <h1>State in React</h1>
+      <h1>{fruit}</h1>
+      <button onClick={handleFruit}>Change Fruit Name</button>
+
     </div>
   )
 }
